@@ -1,3 +1,38 @@
 body {
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+#board {
+    box-sizing: border-box;
+    border: 15px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.player {
+    background-color: blue;
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transition: left 0.1s linear, top 0.1s linear;
+    width: 30px;
+}
+
+.ball {
+    background-color: red;
+    border-radius: 50%;
+    height: 20px;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 20px;
+}
+
+.goodbye {
+    display: none;
 }
