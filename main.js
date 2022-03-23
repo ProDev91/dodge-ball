@@ -112,3 +112,4 @@ function checkIfHit(ballPosition) {
         $('.player').addClass('goodbye')
     }
 }
+
