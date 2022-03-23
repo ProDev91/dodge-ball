@@ -2,10 +2,9 @@ $(document).ready(initApp);
 
 function initApp() {
     $(document).on("keydown", movePlayer);
-    createPlayer()
-    // setInterval(function () {
+    setInterval(function () {
     spawnBalls()
-    // }, 1000)
+    }, 100)
 }
 
 let level = 1;
@@ -14,14 +13,6 @@ let moveUpKeys = { key: 87, arrow: 38 };
 let moveRightKeys = { key: 68, arrow: 39 };
 let moveDownKeys = { key: 83, arrow: 40 };
 let moveLeftKeys = { key: 65, arrow: 37 };
-
-function createPlayer() {
-    var player = $("#player");
-    var ctx = player[0].getContext('2d');
-    ctx.fillStyle = "blue";
-    ctx.fillRect(0, 0, 30, 30);
-    console.log(ctx)
-}
 
 function movePlayer(event) {
     let currentKeyPressed = event.which
@@ -83,7 +74,7 @@ function spawnBalls() {
 }
 
 function moveBall(newBall) {
-    $(newBall).animate({ left: '100%' }, 1000, "linear")
+    $(newBall).animate({ left: '100%' }, 5000, "linear")
     $(newBall).queue(function () {
         $(this).remove()
     })
