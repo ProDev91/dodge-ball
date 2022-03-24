@@ -1,43 +1,8 @@
 body {
-    height: 100vh;
     margin: 0;
-    overflow: hidden;
-    position: relative;
-    width: 100vw;
 }
 
-#board {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-}
-
-.player {
-    background-color: blue;
-    height: 30px;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transition: left 0.1s linear, top 0.1s linear;
-    width: 30px;
-}
-
-.ball {
-    background-image: url('./images/ball.png');
-    background-size: cover;
-    border-radius: 50%;
-    height: 20px;
-    left: 0%;
-    position: absolute;
-    top: 0%;
-    width: 20px;
-    transition: left 0.1s linear;
-}
-
-.goodbye {
-    display: none;
-}
-
-.move-ball {
-    left: 100%;
+canvas {
+    background-color: white;
+    border: 1px solid black;
 }
